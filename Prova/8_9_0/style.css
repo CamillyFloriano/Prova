@@ -1,0 +1,177 @@
+/* Definição das Variáveis de Cor */
+:root {
+    --color-bg-body: #f8f9fa; /* Fundo claro do corpo */
+    --color-white: #FFFFFF; /* Cor branca (usada para texto e fundos) */
+    --color-black: #000000; /* Cor preta */
+
+    --color-primary: #007bff; /* Cor primária (azul do header, borda da quote-box, cor do autor) */
+
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.1); /* Sombra média (mesmo valor no snippet) */
+
+    --color-text-heading: #343a40; /* Cor dos títulos (h1 no container) */
+    --color-text-subtle-light: #e9ecef; /* Texto claro sutil (p no header, link footer) */
+    --color-text-quote: #495057; /* Cor do texto da citação */
+
+    --color-bg-container: #fff; /* Fundo do painel central */
+    --color-bg-quote-box: #e9ecef; /* Fundo da caixa de citação */
+    --color-bg-footer: #333; /* Fundo do footer */
+    --color-bg-accent: #ffc107; /* Fundo de destaque (número da quote) */
+
+    --color-button-success: #28a745; /* Fundo do botão verde */
+    --color-button-success-hover: #218838; /* Fundo do botão verde no hover */
+
+    /* Nota: Não há bordas fixas claras ou sutis neste snippet, mas poderiam ser adicionadas se necessário */
+    /* --color-border-light: #ccc; */
+    /* --color-border-subtle: #eee; */
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+    background-color: var(--color-bg-body); 
+}
+
+.base-container {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    max-width: 700px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    box-shadow: 0 4px 20px var(--shadow-medium); 
+    background-color: var(--color-bg-container); 
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: var(--color-text-heading); 
+}
+
+header {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-white); 
+    background-color: var(--color-primary); 
+    box-shadow: 0 2px 5px var(--shadow-light); 
+}
+
+header h1 {
+    margin: 0;
+    color: var(--color-white); 
+}
+
+header p {
+    font-size: 1em;
+    margin: 5px 0 0;
+    font-weight: bold;
+    color: var(--color-text-subtle-light); 
+}
+
+
+.quote-box {
+    width: 100%;
+    padding: 20px; 
+    text-align: left;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    border-left: 5px solid var(--color-primary); 
+    background-color: var(--color-bg-quote-box);
+}
+
+#quote { 
+    padding: 0;
+    margin-left: 0; 
+    margin-right: 0;
+    line-height: 1.6;
+    font-size: 1.5rem; 
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--color-text-quote); 
+}
+
+#number-quote{
+    width: 30px;
+    font-size: 2rem;
+    text-align: left; 
+    border-radius: 50%;
+    font-style: italic; 
+    color: var(--color-black);  
+    padding: 12px 10px 10px 20px;
+    background-color: var(--color-bg-accent);
+}
+
+
+#author {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: right;
+    color: var(--color-primary); 
+}
+
+#new-quote-btn {
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 5px;
+    color: var(--color-white); 
+    transition: background-color 0.3s ease;
+    background-color: var(--color-button-success); 
+}
+
+#new-quote-btn:hover {
+    background-color: var(--color-button-success-hover); 
+}
+
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    text-align: center;
+    color: var(--color-white); 
+    background-color: var(--color-bg-footer);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: var(--color-text-subtle-light); 
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer span {
+    font-weight: bold;
+}

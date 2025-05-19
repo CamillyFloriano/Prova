@@ -1,0 +1,191 @@
+/* Definição das Variáveis de Cor */
+:root {
+    --color-bg-body: #e9ecef; /* Fundo claro do corpo */
+    --color-white: #FFFFFF; /* Cor branca (usada para texto e fundos) */
+    --color-primary: #007bff; /* Cor primária (azul do header, h1 no container) */
+
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.1); /* Sombra média (mesmo valor no snippet) */
+
+    --color-text-subtle-light: #e9ecef; /* Texto claro sutil (subtítulo header, link footer) */
+    --color-text-dark: #333; /* Texto escuro (label input) */
+    --color-text-muted: #555; /* Texto suave (counters text - não usado neste snippet, mas mantido para consistência se viesse do outro) */
+
+    --color-bg-footer: #333; /* Fundo do footer */
+
+    --color-border-light: #ccc; /* Borda clara (input) */
+    --color-border-subtle: #eee; /* Borda sutil (top resultado) */
+
+    --color-button-success: #28a745; /* Fundo do botão verde */
+    --color-button-success-hover: #218838; /* Fundo do botão verde no hover */
+
+    --color-bg-error: #c82333; /* Fundo para mensagem de erro */
+
+    /* Cores para as classificações de IMC */
+    --color-text-imc-low: #ffc107; /* Amarelo */
+    --color-text-imc-normal: #28a745; /* Verde */
+    --color-text-imc-overweight: #fd7e14; /* Laranja */
+    --color-text-imc-obese: #dc3545; /* Vermelho */
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    font-family: sans-serif;
+    background-color: var(--color-bg-body); 
+}
+
+.base-container{
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    gap: 15px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 15px var(--shadow-medium); 
+}
+
+h1 {
+    margin-bottom: 5px;
+    color: var(--color-primary); 
+}
+
+header {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-white); 
+    background-color: var(--color-primary); 
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--color-white); 
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: var(--color-text-subtle-light); 
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color-text-dark); 
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-border-light); 
+}
+
+#calcular-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: var(--color-white); 
+    transition: background-color 0.3s ease;
+    background-color: var(--color-button-success); 
+}
+
+#calcular-btn:hover {
+    background-color: var(--color-button-success-hover);
+}
+
+#resultado {
+    padding: 15px;
+    margin-top: 20px;
+    min-height: 1.5em;
+    font-size: 1.1rem;
+    text-align: center;
+    border-top: 1px solid var(--color-border-subtle); 
+}
+
+#erro-messagem{
+    width: 100%;
+    height: 3rem;
+    padding-top: 7px;
+    font-weight: bold;
+    box-sizing: border-box; 
+    color: var(--color-white); 
+    background-color: var(--color-bg-error); 
+}
+
+.resultado-baixo {
+    font-weight: bold;
+    color: var(--color-text-imc-low);
+}
+
+.resultado-normal { 
+    font-weight: bold;
+    color: var(--color-text-imc-normal);
+}
+
+.resultado-sobre {
+    font-weight: bold;
+    color: var(--color-text-imc-overweight);
+}
+
+.resultado-obesidade { 
+    font-weight: bold;
+    color: var(--color-text-imc-obese);
+}
+
+
+footer {
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    padding: 15px 0;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-bg-footer); 
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.8em;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-text-subtle-light); 
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer span {
+    font-weight: bold;
+}

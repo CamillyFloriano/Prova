@@ -1,0 +1,134 @@
+/* Definição das Variáveis de Cor */
+:root {
+    --color-background-body: #f4f4f4;
+    --color-background-header: #007bff;
+    --color-background-container: #fff;
+    --color-background-footer: #333; 
+
+    --color-text-header-title: white;
+    --color-text-header-subtitle: #e9ecef;
+    --color-text-dark: #333; 
+    --color-text-muted: #555;
+    --color-text-light: #e9ecef; 
+    --color-text-accent: #007bff; 
+
+    --color-border-light: #ccc;
+
+    --color-primary: #007bff; 
+    --color-primary-dark: #0056b3; 
+
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.1); 
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: var(--color-background-body);
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-text-header-title);
+    box-shadow: 0 2px 5px var(--shadow-light);
+    background-color: var(--color-background-header);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--color-text-header-title);
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.0em;
+    color: var(--color-text-header-subtitle);
+}
+
+.base-container {
+    width: 100%;
+    display: flex;
+    margin-top: 7rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 10px var(--shadow-medium);
+    background-color: var(--color-background-container);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--color-text-dark);
+}
+
+#text-area {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    resize: vertical;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-border-light);
+}
+
+.counters {
+    width: 100%;
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-around;
+    color: var(--color-text-muted);
+}
+
+.counters p {
+    margin: 0 10px;
+}
+
+.counters span {
+    font-weight: bold;
+    color: var(--color-text-accent);
+}
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    text-align: center;
+    color: var(--color-text-light);
+    background-color: var(--color-background-footer);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
